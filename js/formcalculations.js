@@ -3,8 +3,12 @@ function calculateTotal()
 {
     var sizeSelection = getSizeSelection();
     var veggieSelection = getVeggieSelection();
-    var basePrice = getBasePrice();
-    console.log(veggieSelection)
+    var meatsSelection = getMeatsSelection();
+    var crustSelection = getCrustSelection();
+    var cheeseSelection = getCheeseSelection();
+    var sauceSelection = getSauceSelection();
+
+    console.log(sauceSelection)
 }
 
 function getSizeSelection(){
@@ -19,7 +23,7 @@ function getSizeSelection(){
 
 function getCrustSelection(){
     var crust = document.getElementsByClassName("crust");
-    for (let i = 0; i<sizes.length; i++){
+    for (let i = 0; i<crust.length; i++){
         if (crust[i].checked==true){
             var baseSelection = crust[i].value;
         }
@@ -29,7 +33,7 @@ function getCrustSelection(){
 
 function getCheeseSelection(){
     var cheese = document.getElementsByClassName("cheese");
-    for (let i = 0; i<sizes.length; i++){
+    for (let i = 0; i<cheese.length; i++){
         if (cheese[i].checked==true){
             var baseSelection = cheese[i].value;
         }
@@ -39,7 +43,7 @@ function getCheeseSelection(){
 
 function getSauceSelection(){
     var sauce = document.getElementsByClassName("sauce");
-    for (let i = 0; i<sizes.length; i++){
+    for (let i = 0; i<sauce.length; i++){
         if (sauce[i].checked==true){
             var baseSelection = sauce[i].value;
         }
@@ -66,9 +70,9 @@ function getMeatsSelection(){
             meatsSelection.push(meats[i].value);
         }
     };
-    return veggieSelection;
+    return meatsSelection;
 }
-function getBasePrice(){
+function getSizePrice(){
     var selection = getSizeSelection();
     if(selection == "Personal"){return 6};
     if(selection == "Medium"){return 10};
@@ -76,7 +80,7 @@ function getBasePrice(){
     if(selection == "Extralarge"){return 16};
     return null;}
 
-function getBasePrice(){
+function getCrustPrice(){
     var selection = getCrustSelection();
     if(selection == "Plain Crust"){return 0};
     if(selection == "Garlic Butter Crust"){return 0};
@@ -85,7 +89,7 @@ function getBasePrice(){
     if(selection == "Stuffed Crust"){return 3};
     return null;}
 
-function getBasePrice(){
+function getVeggiePrice(){
     var selection = getVeggieSelection();
     if(selection == "Mushrooms"){return 1};
     if(selection == "Jalapeno"){return 1};
@@ -95,7 +99,7 @@ function getBasePrice(){
     if(selection == "Green Peppers"){return 1};
     return null;}
 
-function getBasePrice(){
+function getMeatPrice(){
     var selection = getMeatSelection();
     if(selection == "Pepperoni"){return 1};
     if(selection == "Sausage"){return 1};
@@ -105,14 +109,14 @@ function getBasePrice(){
     if(selection == "Chicken"){return 1};
     return null;}
 
-function getBasePrice(){
+function getCheesePrice(){
     var selection = getCheeseSelection();
     if(selection == "Regular Cheese"){return 0};
     if(selection == "Extra Cheese"){return 3};
     if(selection == "No Cheese"){return 0};
     return null;}
 
-function getBasePrice(){
+function getSaucePrice(){
     var selection = getSauceSelection();
     if(selection == "Marinara Sauce"){return 0};
     if(selection == "White Sauce"){return 0};
@@ -120,3 +124,6 @@ function getBasePrice(){
     if(selection == "No Sauce"){return 0};
     return null;}
 
+function getTotalPrice(){ //calculates total pizza price
+    return getSizePrice() + getCrustPrice() + getCheesePrice()+ getMeatPrice() + getVeggiePrice();
+    }
