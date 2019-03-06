@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=8"/>
+    <title>Academy Pizza</title>
+    <script type="text/javascript" src="js/formcalculations.js"></script>
+    <link href="css/pizza.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="wrap">
+        <form action="" id="pizzaform" onsubmit="return false;">
+        <div>
+            <div class="cont_order">
+               <fieldset>
+                <legend>Academy Pizza:</legend>
+                <legend>Size:</legend>
+                <label >Size Of the Pizza</label>
+                <label ><input class='pizzasize' type="radio"  name="pizzasize" value="Personal"  />Personal ($6.00)</label><br/>
+                <label ><input class='pizzasize' type="radio"  name="pizzasize" value="Medium"  />Medium ($10.00)</label><br/>
+                <label ><input class='pizzasize' type="radio"  name="pizzasize" value="Large"  />Large (14.00)</label><br/>
+                <label ><input class='pizzasize' type="radio"  name="pizzasize" value="Extralarge"  />Extra Large($16.00)</label><br/>
+                <br/>
+                <div class="menu">
+                    <legend>Crust:</legend>
+                    
+                    <input class="crust" type="radio" name="Crust" value="Plain Crust"> Plain Crust<br>
+                    <input class="crust" type="radio" name="Crust" value="Garlic Butter Crust"> Garlic Butter Crust<br>
+                    <input class="crust" type="radio" name="Crust" value="Spicy Crust"> Spicy Crust<br>
+                    <input class="crust" type="radio" name="Crust" value="House Special Crust"> House Special Crust<br>
+                    <input class="crust" type="radio" name="Crust" value="Stuffed Crust" /> Stuffed Crust (add $3.00) <br>
+                    <br/>
+                </div>
+                <div class="menu">
+                <legend>Veggies:</legend>
+                <label >1st is complimentary</label>
+         
+                
+                <input class="veggies" type="checkbox" name="Veggies" value="Mushrooms"> Mushrooms<br>
+				<input class="veggies" type="checkbox" name="Veggies" value="Jalapeno"> Jalapeno<br>
+				<input class="veggies" type="checkbox" name="Veggies" value="Tomatoes"> Tomatoes<br>
+				<input class="veggies" type="checkbox" name="Veggies" value="Onions" checked> Onions<br>
+				<input class="veggies" type="checkbox" name="Veggies" value="Olives"> Olives<br>
+				<input class="veggies" type="checkbox" name="Veggies" value="Green Peppers"> Green Peppers<br>
+                
+                </div>  
+                <br/>
+                <div class="menu">
+                    <legend>Meats:</legend>
+                    <label >1st is complimentary</label>	
+                    <input class="meats" type="checkbox" name="Meats" value="Pepperoni"> Pepperoni<br>
+                    <input class="meats" type="checkbox" name="Meats" value="Sausage"> Sausage<br>
+                    <input class="meats" type="checkbox" name="Meats" value="Canadian Bacon"> Canadian Bacon<br>
+                    <input class="meats" type="checkbox" name="Meats" value="Ground Beef"> Ground Beef<br>
+                    <input class="meats" type="checkbox" name="Meats" value="Anchovy"> Anchovy<br>
+                    <input class="meats" type="checkbox" name="Meats" value="Chicken"> Chicken<br>
+                
+                </div>
+                <br/>
+                <div class="menu">
+                    <legend>Cheese:</legend>
+                    
+                    <input class="cheese" type="radio" name="Cheese" value="Regular Cheese"> Regular Cheese<br>
+                    <input class="cheese" type="radio" name="Cheese" value="Extra Cheese"  />  Extra Cheese (add $3.00)<br>
+                    <input class="cheese" type="radio" name="Cheese" value="No Cheese"> No Cheese<br>
+                
+                </div>
+                <div class="menu">
+                    <legend>Sauce:</legend>
+                    
+                    <input class="sauce" type="radio" name="Sauce" value="Marinara Sauce"> Marinara Sauce<br>
+                    <input class="sauce" type="radio" name="Sauce" value="White Sauce"> White Sauce<br>
+                    <input class="sauce" type="radio" name="Sauce" value="BBQ Sauce"> BBQ Sauce<br>
+                    <input class="sauce" type="radio" name="Sauce" value="No Sauce"> No Sauce<br>
+                
+                </div>
+               
+               
+                <div id="totalPrice" hidden =true></div>
+                
+            </fieldset>
+            </div>
+           
+        	
+            <input type='submit' id='submit' value='Submit' onclick="calculateTotal()" />
+        </div>  
+       </form>
+	</div><!--End of wrap-->
+
+</body>
+</html>
