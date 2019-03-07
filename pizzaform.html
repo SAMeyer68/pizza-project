@@ -79,11 +79,61 @@
                 
             </fieldset>
             </div>
-           
+            <div class="modal-body"> <!-- seems to make the table a little narrower -->
+                <div class="container-fluid mx-auto"> <!-- seems to make the table a little narrower -->
+                  <table class="table table-striped mx-auto container-fluid">
+                    <thead> <!-- table head -->
+                      <tr>
+                      <th>Component</th>
+                      <th>Selection</th>
+                      <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody> <!-- table body -->
+                      <tr> <!-- size row -->
+                        <td>Size</td>
+                        <td id="sizeSelection"></td>
+                        <td id="sizePrice"></td>
+                      </tr>
+                      <tr> <!-- crust row --> 
+                        <td>Crust</td>
+                        <td id="crustSelection"></td>
+                        <td id="crustPrice"></td>
+                      </tr>
+                      <tr> <!-- sauce row --> 
+                        <td>Sauce</td>
+                        <td id="sauceselection"></td>
+                        <td id="saucePrice"></td>
+                      </tr>
+                      <tr> <!-- cheese row --> 
+                        <td>Cheese</td>
+                        <td id="cheeseSelection"></td>
+                        <td id="cheesePrice"></td>
+                      </tr>
+                      <tr> <!-- meats row--> 
+                        <td>Meats</td>
+                        <td id="meatSelection"></td>
+                        <td id="meatPrice"></td>
+                      </tr>
+                      <tr> <!-- veggies row--> 
+                        <td>Veggies</td>
+                        <td id="veggieSelection"></td>
+                        <td id="veggiePrice"></td>
+                      </tr>
+                      <tr class="table-success"> <!-- total row --> 
+                        <td>Total</td>
+                        <td></td>
+                        <td id="receiptTotal"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
             <input type='submit' id='submit' value='Submit' onclick="calculateTotal()" />
         </div>  
        </form>
-	</div><!--End of wrap-->
-
+    </div><!--End of wrap-->
+    
+    
 </body>
 </html>

@@ -8,47 +8,47 @@ function calculateTotal()
     var cheeseSelection = getCheeseSelection();
     var sauceSelection = getSauceSelection();
 
-    console.log(sauceSelection)
+    console.log(getTotalPrice)
 }
 
 function getSizeSelection(){
     var sizes = document.getElementsByClassName("pizzasize");
     for (let i = 0; i<sizes.length; i++){
         if (sizes[i].checked==true){
-            var baseSelection = sizes[i].value;
+            var sizeSelection = sizes[i].value;
         }
     };
-    return baseSelection;
+    return sizeSelection;
 }
 
 function getCrustSelection(){
     var crust = document.getElementsByClassName("crust");
     for (let i = 0; i<crust.length; i++){
         if (crust[i].checked==true){
-            var baseSelection = crust[i].value;
+            var crustSelection = crust[i].value;
         }
     };
-    return baseSelection;
+    return crustSelection;
 }
 
 function getCheeseSelection(){
     var cheese = document.getElementsByClassName("cheese");
     for (let i = 0; i<cheese.length; i++){
         if (cheese[i].checked==true){
-            var baseSelection = cheese[i].value;
+            var cheeseSelection = cheese[i].value;
         }
     };
-    return baseSelection;
+    return cheeseSelection;
 }
 
 function getSauceSelection(){
     var sauce = document.getElementsByClassName("sauce");
     for (let i = 0; i<sauce.length; i++){
         if (sauce[i].checked==true){
-            var baseSelection = sauce[i].value;
+            var sauceSelection = sauce[i].value;
         }
     };
-    return baseSelection;
+    return sauceSelection;
 }
 
 function getVeggieSelection(){
@@ -124,6 +124,6 @@ function getSaucePrice(){
     if(selection == "No Sauce"){return 0};
     return null;}
 
-function getTotalPrice(){ //calculates total pizza price
+function getTotalPrice(){
     return getSizePrice() + getCrustPrice() + getCheesePrice()+ getMeatPrice() + getVeggiePrice();
-    }
+}
