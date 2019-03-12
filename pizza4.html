@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Acedemy Pizza</title>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <link href="css/pizza.css" rel="stylesheet" type="text/css" />>
+    <style>
+        .grid-container {
+              display: grid;
+              grid: 150px / auto auto auto;
+              grid-gap: 10px;
+              background-color: #2196F3;
+              padding: 10px;
+            }
+            
+            .grid-container > div {
+              background-color: rgba(255, 255, 255, 0.8);
+              text-align: center;
+              padding: 20px 0;
+              font-size: 30px;
+            }
+            </style>
+</head>
+
+<body style="background-color:powderblue;">
+
+    <div class="cont_order">
+        <fieldset>
+            <legend>Academy Pizza:</legend>
+
+            <label>Size Of the Pizza</label><BR>
+            <label><input class='size' type="radio" name="size" value="Personal" />Personal ($6.00)</label><br />
+            <label><input class='size' type="radio" name="size" value="Medium" checked />Medium ($10.00)</label><br />
+            <label><input class='size' type="radio" name="size" value="Large" />Large (14.00)</label><br />
+            <label><input class='size' type="radio" name="size" value="Extralarge" />Extra Large($16.00)</label><br />
+            <br />
+            <div class="menu">
+                <legend>Crust:</legend>
+
+                <input class="crust" type="radio" name="crust" value="Plain Crust" checked> Plain Crust<br>
+                <input class="crust" type="radio" name="crust" value="Garlic Butter Crust"> Garlic Butter Crust<br>
+                <input class="crust" type="radio" name="crust" value="Spicy Crust"> Spicy Crust<br>
+                <input class="crust" type="radio" name="crust" value="House Special Crust"> House Special Crust<br>
+                <input class="crust" type="radio" name="crust" value="Stuffed Crust" /> Stuffed Crust (add $3.00) <br>
+                <br />
+            </div>
+            <div class="menu">
+                <legend>Veggies:</legend>
+                <label>1st is complimentary</label><br>
+
+                <input class="veggie" type="checkbox" name="Veggies" value="Mushrooms"> Mushrooms<br>
+                <input class="veggie" type="checkbox" name="veggie" value="Jalapeno"> Jalapeno<br>
+                <input class="veggie" type="checkbox" name="veggie" value="Tomatoes"> Tomatoes<br>
+                <input class="veggie" type="checkbox" name="veggie" value="Onions"> Onions<br>
+                <input class="veggie" type="checkbox" name="veggie" value="Olives"> Olives<br>
+                <input class="veggie" type="checkbox" name="veggie" value="Green Peppers"> Green Peppers<br>
+
+            </div>
+            <br />
+            <div class="menu">
+                <legend>Meats:</legend>
+                <label>1st is complimentary</label><br>
+                <input class="meat" type="checkbox" name="meat" value="Pepperoni"> Pepperoni<br>
+                <input class="meat" type="checkbox" name="meat" value="Sausage"> Sausage<br>
+                <input class="meat" type="checkbox" name="meat" value="Canadian Bacon"> Canadian Bacon<br>
+                <input class="meat" type="checkbox" name="meat" value="Ground Beef"> Ground Beef<br>
+                <input class="meat" type="checkbox" name="meat" value="Anchovy"> Anchovy<br>
+                <input class="meat" type="checkbox" name="meat" value="Chicken"> Chicken<br>
+
+            </div>
+            <br />
+            <div class="menu">
+                <legend>Cheese:</legend>
+
+                <input class="cheese" type="radio" name="cheese" value="Regular Cheese" checked> Regular Cheese<br>
+                <input class="cheese" type="radio" name="cheese" value="Extra Cheese" /> Extra Cheese (add $3.00)<br>
+                <input class="cheese" type="radio" name="cheese" value="No Cheese"> No Cheese<br>
+
+            </div>
+            <div class="menu">
+                <legend>Sauce:</legend>
+
+                <input class="sauce" type="radio" name="sauce" value="Marinara Sauce" checked> Marinara Sauce<br>
+                <input class="sauce" type="radio" name="sauce" value="White Sauce"> White Sauce<br>
+                <input class="sauce" type="radio" name="sauce" value="BBQ Sauce"> BBQ Sauce<br>
+                <input class="sauce" type="radio" name="sauce" value="No Sauce"> No Sauce<br>
+
+            </div>
+
+            <script src="pizzaProject.js"></script>
+
+            <div id="Total" hidden=true></div>
+            <div class="footer"><br><br>
+
+                <div>
+                    <button type="button" class="btn btn-primary" onclick="getReceipt()">Submit Your Order</button>
+                </div>
+                <div style="
+                display: inline-block;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 200px;
+                min-height: 300px;
+                max-height: 500px;
+                margin: auto;">
+                    <div id="showText"></div>
+
+                    <div style="">
+                        <div id="Cost"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </fieldset>
+    </div>
+</body>
+
+</html>
